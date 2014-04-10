@@ -13,6 +13,7 @@ import com.mangesh.olpay.usermgmt.UserManagement;
 
 public class UserManagementTest {
 
+	@SuppressWarnings("deprecation")
 	@Test
 	public void authUserByPhoneNumber() {
 
@@ -28,14 +29,14 @@ public class UserManagementTest {
 		UserManagement usermanagement = new UserManagement(usercollection);
 		
 		//when
-		UserData.addUser(u1);
-		UserData.addUser(u2);
-		UserData.addUser(u3);
-		UserData.addUser(u4);
+		userdata.addUser(u1);
+		userdata.addUser(u2);
+		userdata.addUser(u3);
+		userdata.addUser(u4);
 		
+		
+		User actual = usermanagement.getUserByPhoneNumber("9225866145");
 		//then
-		User actual = UserManagement.getUserByPhoneNumber("9225866145");
-		
 		assertEquals(u1, actual);
 
 		

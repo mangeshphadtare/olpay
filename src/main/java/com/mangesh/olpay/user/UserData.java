@@ -5,13 +5,15 @@ import com.mangesh.olpay.gateway.UserCollection;
 
 public class UserData {
 
-	public UserData(UserCollection usercollection) {
-		// TODO Auto-generated constructor stub
+	private UserCollection userCollection;
+
+	public UserData(UserCollection userCollection) {
+
+		this.userCollection = userCollection;
 	}
 
-	public static void addUser(User u1) {
-		// TODO Auto-generated method stub
-		
+	public  void addUser(User u1) {
+		this.userCollection.addUser(u1);
 	}
 
 }

@@ -1,5 +1,7 @@
 package com.mangesh.olpay.entities;
 
+
+
 public class User {
 
 	private String name;
@@ -15,7 +17,12 @@ public class User {
 		}
 	
 	public String getUserByPhoneNumber(){
-		return name;
+
+		return phnumber;
+		
+		
+		
+
 	}
 
 }
